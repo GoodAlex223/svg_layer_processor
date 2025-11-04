@@ -8,7 +8,7 @@
 
 ## Установка (один раз)
 
-### Linux/macOS:
+### Linux/macOS
 
 ```bash
 # 1. Установите системные зависимости
@@ -22,7 +22,7 @@ brew install cairo pango
 pip install -r requirements.txt
 ```
 
-### Windows:
+### Windows
 
 ```bash
 # 1. Скачайте и установите GTK3:
@@ -37,11 +37,13 @@ pip install -r requirements.txt
 ### Вариант 1: Автоматический (оба файла)
 
 **Linux/macOS:**
+
 ```bash
 ./run_example.sh
 ```
 
 **Windows:**
+
 ```cmd
 run_example.bat
 ```
@@ -90,16 +92,21 @@ python process_svg_to_a4_pdf.py nested2.svg --font-size 5 --text-color blue
 ## Возможные проблемы
 
 ### Ошибка "cairo not found"
+
 **Решение:** Установите системные зависимости (см. раздел "Установка" выше)
 
 ### Ошибка "No module named 'PyPDF2'"
-**Решение:** 
+
+**Решение:**
+
 ```bash
 pip install PyPDF2
 ```
 
 ### Скрипт не запускается
+
 **Решение:**
+
 ```bash
 # Linux/macOS - сделайте файл исполняемым
 chmod +x run_example.sh
@@ -113,6 +120,7 @@ python process_svg_to_a4_pdf.py ваш_файл.svg
 Полная документация: `README.md`
 
 Справка по скрипту:
+
 ```bash
 python process_svg_to_a4_pdf.py --help
 ```
