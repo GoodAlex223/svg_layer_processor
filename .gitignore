@@ -1,2 +1,5 @@
 *.pdf
 *.svg
+test_wrapper/
+test_wrapper_prev/
+simplified/

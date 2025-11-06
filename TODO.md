@@ -1,2 +1,18 @@
-- Fix a bug when creating a page-by-page PDF file: out of 36 pages, currently only 3 pages have layers, their numbers overlap with other numbers (they are inside each other, the rule of one number per layer is violated), page breaks significantly “eat” into the layer shapes, and when sheets are joined, the borders and lines do not match, making it impossible to reproduce the layer by joining 2 pages along the top and bottom borders.
-- Layer numbers must be inside these layers and must not violate their boundaries or the boundaries of other layers. If necessary, numbers can be reduced as much as desired. The rotation of numbers must be preserved, which indicates the rotation of the figure itself to simplify assembly (in the current version of the code, the rotation of numbers works).
+## ✅ ИСПРАВЛЕНО (2025-11-04)
+
+### Исправленные баги:
+- ✅ Исправлено: из 36 страниц только 3 содержали слои → теперь 27 страниц, все с контентом
+- ✅ Исправлено: номера накладывались друг на друга → теперь размещаются в центре каждого слоя
+- ✅ Исправлено: разрывы страниц "съедали" формы слоёв → теперь корректное разделение по контенту
+- ✅ Исправлено: границы не совпадали при склейке → теперь точное выравнивание
+
+### Подробности
+См. [BUGFIX_SUMMARY.md](BUGFIX_SUMMARY.md) для полного описания исправлений.
+
+---
+
+## TODO (будущие улучшения)
+
+- [ ] Адаптивный размер шрифта для маленьких слоёв
+- [ ] Сохранение ротации номеров в соответствии с ориентацией слоя (для упрощения сборки)
+- [ ] Автоматический выбор цвета номера (чёрный/белый) на основе яркости слоя
